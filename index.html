@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio de Noham Baghdad, étudiant en BUT MMI – développeur web.">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E💻%3C/text%3E%3C/svg%3E">
+<title>Noham Baghdad – Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<header><div class="bar">
+<a href="#" data-view="home" data-i18n="home">Home</a><a href="#" data-view="home" data-scroll="about" data-i18n="about">About Me</a><a href="#" data-view="home" data-scroll="projects" data-i18n="projects">Projects</a><a href="#" data-view="contact" data-i18n="contact">Contact</a>
+<span class="sp"></span>
+<button class="ic" id="lang" aria-label="Language"><img alt="" src="images/icones/langue.png"><b id="lt">FR</b></button>
+<button class="ic" id="theme" aria-label="Theme"><img alt="" src="images/icones/theme.png"></button>
+</div></header>
+<main id="v-home" class="view">
+<section class="hero">
+<div>
+<h1 data-i18n="title">Web developer</h1>
+<div class="nm"><i></i>Noham BAGHDAD</div>
+<p data-i18n="intro">Second-year student in the BUT MMI (Multimedia and Internet Professions) Bachelor's degree, a 3-year programme, in Saint-Lô, France.</p>
+</div>
+<div class="photo"><img alt="Noham Baghdad" src="images/noham-baghdad.webp"></div>
+</section>
+
+<div class="grid" id="about">
+<div class="card"><h2 data-i18n="about">About Me</h2><p data-i18n="aboutTxt">Passionate about coding since I first started in secondary school, my goal today is to keep developing my skills, solve problems, build projects and take pride in the finished result.</p></div>
+<div class="card"><h2 data-i18n="soft">Soft skills</h2><p data-i18n="aboutTxt">Passionate about coding since I first started in secondary school, my goal today is to keep developing my skills, solve problems, build projects and take pride in the finished result.</p></div>
+</div>
+
+<div class="card">
+<h2 data-i18n="tech">Technologies</h2>
+<h3>Front-end</h3><div class="chips"><span><img alt="" src="images/icones/html.png">HTML</span><span><img alt="" src="images/icones/css.png">CSS</span><span><img alt="" src="images/icones/javascript.png">JavaScript</span><span><img alt="" src="images/icones/figma.png">Figma</span></div>
+<h3>Back-end</h3><div class="chips"><span><img alt="" src="images/icones/php.png">PHP</span><span><img alt="" src="images/icones/sql.png">SQL</span></div>
+<h3 data-i18n="software">Software</h3><div class="chips"><span><img alt="" src="images/icones/vscode.png">VS Code</span><span><img alt="" src="images/icones/terminal.png">Terminal</span></div>
+</div>
+
+<section id="projects">
+<div class="card proj"><div class="car" data-k="p1"><img alt=""><button class="pv" aria-label="Previous">&#8249;</button><button class="nx" aria-label="Next">&#8250;</button><div class="dots"></div></div><div><h3>SAE 103 : <span data-i18n="p1t">Artisan Website</span></h3><p data-i18n="p1">This website was my first real project using HTML, CSS, and PHP. The goal was to build a website for an artisan, applying everything we had learned during our first semester. I used HTML and CSS to create the front end, and PHP to generate repetitive content, such as the products sold by the artisan and the product information tables. This project was a turning point for me: it taught me a lot about programming and confirmed my passion for back-end development and optimization.</p></div></div>
+<div class="card proj"><div class="car" data-k="p2"><img alt=""><button class="pv" aria-label="Previous">&#8249;</button><button class="nx" aria-label="Next">&#8250;</button><div class="dots"></div></div><div><h3>SAE 205 : <span data-i18n="p2t">Cinema's Website</span></h3><p data-i18n="p2">The cinema website is one of my biggest projects to date. I built it using HTML, CSS, JavaScript, PHP, and SQL. The goal was to create a website connected to a database, from which I could retrieve data to display information and into which users could add new data. The project also includes an authentication system built around sessions. Through this project, I learned how to structure and secure a website, and how to use forms properly.</p></div></div>
+<div class="card proj"><div class="car" data-k="p3"><img alt=""><button class="pv" aria-label="Previous">&#8249;</button><button class="nx" aria-label="Next">&#8250;</button><div class="dots"></div></div><div><h3>Exo4 : Simon</h3><p data-i18n="p3">Although it was not one of my biggest projects, I consider it one of the most important. I built it mainly with JavaScript, along with a little HTML and CSS. The goal was to recreate the game Simon using addEventListener, setTimeout, and setInterval. Through this exercise, I learned how to separate and organize my functions to keep my code simpler and easier to maintain.</p></div></div>
+</section>
+</main>
+
+<main id="v-contact" class="view" hidden>
+<h1 data-i18n="contact">Contact</h1>
+<div class="grid">
+<div class="card"><h2 data-i18n="msgT">Send me a message</h2>
+<p data-i18n="cIntro">Interested in my profile or a project? Send me a message and I will reply as soon as possible.</p>
+<form id="cf">
+<label for="nm" data-i18n="fName">Name</label><input id="nm" name="nm" required data-ph="phName">
+<label for="em" data-i18n="fMail">Email</label><input id="em" name="em" type="email" required data-ph="phMail">
+<label for="msg" data-i18n="fMsg">Message</label><textarea id="msg" name="msg" rows="5" required data-ph="phMsg"></textarea>
+<button class="send" type="submit" data-i18n="fSend">Send</button>
+<p class="note" data-i18n="fNote">Your email app will open with the message ready to send.</p>
+</form></div>
+<div class="card"><h2 data-i18n="cInfo">Details</h2>
+<p><b>E-mail :</b> <a class="mail"></a></p>
+<p><b>LinkedIn :</b> <a class="mail" href="https://www.linkedin.com/in/noham-baghdad">linkedin.com/in/noham-baghdad</a></p>
+<p><b data-i18n="cLocL">Location :</b> <span data-i18n="cLoc">Saint-Lô, France</span></p>
+</div></div>
+<a class="back" href="#" data-view="home" data-i18n="back">&larr; Back to home</a>
+</main>
+<main id="v-legal" class="view" hidden>
+<h1 data-i18n="legal">Legal notice</h1>
+<div class="card"><h2 data-i18n="l1t">Site publisher</h2><p data-i18n="l1">This personal portfolio is published by Noham Baghdad, student at the BUT MMI (Multimedia and Internet Professions), Saint-Lô, France. Publication director: Noham Baghdad.</p><p><b>E-mail :</b> <a class="mail"></a></p></div>
+<div class="card"><h2 data-i18n="l2t">Hosting</h2><p data-i18n="l2">Hosting provider: GitHub Pages, operated by GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States (pages.github.com).</p></div>
+<div class="card"><h2 data-i18n="l3t">Intellectual property</h2><p data-i18n="l3">The texts, layout and code of this site are the work of Noham Baghdad. The projects shown were produced as school assignments; third-party images and logos belong to their respective owners. Any reproduction without permission is prohibited.</p></div>
+<div class="card"><h2 data-i18n="l4t">Personal data</h2><p data-i18n="l4">This site uses no tracking tools and no analytics cookies. Your language and theme choices are saved only in your browser. The contact form sends nothing to a server: it opens your email app, and your message reaches me only if you send it. You can request access to, correction or deletion of our exchanges by writing to the address above (GDPR rights).</p></div>
+<div class="card"><h2 data-i18n="l5t">Liability</h2><p data-i18n="l5">I do my best to keep the information on this site accurate, but I cannot guarantee that it is complete or up to date. I am not responsible for the content of the external sites linked from this page.</p></div>
+<a class="back" href="#" data-view="home" data-i18n="back">&larr; Back to home</a>
+</main>
+<footer><div class="in">
+<strong>© 2026 Noham Baghdad</strong>
+<a class="lg" href="#" data-view="legal" data-i18n="legal">Legal notice</a>
+<a class="top" href="#top" data-i18n="top">Back to top</a>
+<a class="in-btn" href="https://www.linkedin.com/in/noham-baghdad" aria-label="LinkedIn"><img alt="LinkedIn" src="images/icones/linkedin.png"></a>
+</div></footer>
+
+<div id="lb" hidden role="dialog" aria-modal="true"><button class="x" aria-label="Close">&times;</button><button class="lp" aria-label="Previous">&#8249;</button><img alt=""><button class="ln" aria-label="Next">&#8250;</button><div class="lc"></div></div>
+<script src="js/main.js"></script>
+</body>
+</html>
