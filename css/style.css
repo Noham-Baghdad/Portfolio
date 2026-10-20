@@ -4,8 +4,7 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{color-scheme:dark;--bg:#110d1b;--card:#1b1529;--text:#f4f0fb;--muted:#bdb4d1;--accent:#7c3aed;--at:#b79cff;--line:#2e2542;--photo:#c4b0f7;--chip:#251c3a}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 *{box-sizing:border-box}
-body{min-height: 100vh;min-height: 100dvh;display: flex;flex-direction: column;margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;transition:background .3s,color .3s}
-main {flex: 1 0 auto;width: 100%;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;transition:background .3s,color .3s}
 main,header .bar,footer .in{max-width:900px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;padding-top:14px}
 .bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--card);border-radius:999px;padding:10px 16px!important;box-shadow:0 2px 12px #0002;max-width:860px!important}
@@ -83,4 +82,26 @@ img{max-width:100%}
 @media(max-width:380px){
  .bar a,.bar button{font-size:.75rem;padding:4px 9px}
  .hero h1{font-size:1.8rem}
+}
+
+/* ===== Pied de page collé en bas ===== */
+body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+main{flex:1 0 auto;width:100%}
+
+/* ===== Bandeau de recherche de stage ===== */
+.banner{background:var(--accent);color:#fff;text-align:center;font-size:.9rem;font-weight:600;padding:9px 14px}
+.banner a{color:#fff;text-decoration:underline;margin-left:8px;white-space:nowrap}
+@media(max-width:760px){.banner{font-size:.78rem;padding:8px 12px}}
+
+/* ===== Menu sur une seule ligne (téléphone) ===== */
+@media(max-width:760px){
+ header .bar{flex-wrap:nowrap;justify-content:space-between;gap:4px;padding:7px 8px!important;margin-left:8px;margin-right:8px}
+ .bar a,.bar button{font-size:clamp(.62rem,3vw,.8rem);padding:4px clamp(5px,2vw,10px);white-space:nowrap}
+ .bar .ic{padding:4px clamp(5px,1.6vw,9px);gap:4px}
+ .ic img{width:18px;height:18px}
+ .ic b{font-size:.7rem}
+}
+@media(max-width:400px){
+ .ic b{display:none}
+ .bar a,.bar button{font-size:clamp(.6rem,3.1vw,.75rem)}
 }
